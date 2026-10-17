@@ -18,7 +18,7 @@ Its core focus is the complete lifecycle of intelligent, time-sensitive operatio
 
 **Observe and understand data → analyze and reason → decide → apply risk and authority controls → automate and execute → measure outcomes → learn and improve.**
 
-The project's first and most developed application is **AutoTrade Core**, a private financial-market engineering system. Its long-term product objective is a dependable, increasingly intelligent automated trading platform that can operate under realistic market constraints, make evidence-backed decisions, execute safely when authorized, and pursue **positive, sustainable, risk-adjusted economic performance**.
+The project's first and most developed application is **a private financial-market engineering implementation**. Its long-term product objective is a dependable, increasingly intelligent automated trading platform that can operate under realistic market constraints, make evidence-backed decisions, execute safely when authorized, and pursue **positive, sustainable, risk-adjusted economic performance**.
 
 That economic performance is an objective to establish through realistic evidence, **not an achieved or guaranteed result**.
 
@@ -181,9 +181,9 @@ Real / Representative Data + Contextual Inputs
 
 This is a **target product workflow**, not a claim that an end-to-end production-live autonomous system has been demonstrated. Real implementation and authorization remain subject to canonical contracts, tests, evidence, and project governance.
 
-## 7. First Concrete Product: AutoTrade Core
+## 7. First Concrete Application: Financial-Market Engineering Core
 
-The private **AutoTrade Core** repository is the primary implementation and validation domain for IMAS. Financial markets provide a demanding environment in which analytical quality, execution behavior, safety, timing, evidence, and economic outcomes can be assessed together.
+The private **financial-market engineering core** is the primary implementation and validation domain for IMAS. Financial markets provide a demanding environment in which analytical quality, execution behavior, safety, timing, evidence, and economic outcomes can be assessed together.
 
 The documented engineering foundation includes:
 
@@ -251,11 +251,11 @@ This is a possible expansion direction, not an assertion that those domain-speci
 
 ## 11. Public Overview, Implementation, and Metrics
 
-This repository is the **public-facing description of IMAS**. It does not contain the private AutoTrade Core implementation, its confidential artifacts, credentials, or operational infrastructure.
+This repository is the **public-facing description of IMAS**. It does not contain the private core implementation, confidential engineering artifacts, credentials, or operational infrastructure.
 
 - **IMAS** is the official abbreviated identity of **Intelligent Multi-Agent System**.
 - **IMAS Project** may be used as a natural reference to the research and engineering effort; the word *Project* is not part of the formal name.
-- **AutoTrade Core** remains the name of the existing private financial-market implementation unless changed through a separate engineering decision.
+- **The existing private financial-market core** remains the first concrete implementation. Its internal repository identity and naming may evolve independently of this public overview.
 - Current work, tests, architecture, and maturity are governed by the private repository's canonical sources and evidence, not by public marketing claims.
 
 ### Metrics and progress reporting
