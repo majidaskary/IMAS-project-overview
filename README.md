@@ -46,9 +46,9 @@ IMAS — Build Program
 
 Phase 1   — Core Architecture Foundations ......... CLOSED (foundation)    ████████████████████
 Phase 1.5 — Integration & Operationalization ...... ACTIVE TRANSITION      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-Phase 2   — Stabilization & Capital Scaling ....... NOT YET ENTERED       ░░░░░░░░░░░░░░░░░░░░
-Phase 3   — Advanced Engines & Adaptation ......... FUTURE ROADMAP        ░░░░░░░░░░░░░░░░░░░░
-Phase 4   — Platformization & Expansion .......... FUTURE ROADMAP        ░░░░░░░░░░░░░░░░░░░░
+Phase 2   — Stabilization & Capital Scaling ....... NOT YET ENTERED        ░░░░░░░░░░░░░░░░░░░░
+Phase 3   — Advanced Engines & Adaptation ......... FUTURE ROADMAP         ░░░░░░░░░░░░░░░░░░░░
+Phase 4   — Platformization & Expansion .......... FUTURE ROADMAP          ░░░░░░░░░░░░░░░░░░░░
 ~~~
 
 **Phase 1 architecture/foundation closeout is not product completion.** Phase 1.5 is the current operational integration and validation transition; entry into subsequent phases requires separate criteria and authorization.
@@ -60,7 +60,7 @@ EPIC 1 — Market Data & Intelligence .............. FOUNDATION CLOSED     █�
 EPIC 2 — Strategy & Decision Layer ............... FOUNDATION CLOSED     ████████████████████
 EPIC 3 — Execution Layer ......................... FOUNDATION CLOSED     ████████████████████
 EPIC 4 — Risk & Portfolio Layer .................. FOUNDATION CLOSED     ████████████████████
-EPIC 5 — Execution Plane, Evaluation & Live Gate . ARCH. CLOSEOUT 5.24  ████████████████████
+EPIC 5 — Execution Plane, Evaluation & Live Gate . ARCH. CLOSEOUT 5.24   ████████████████████
 ~~~
 
 All **five Phase 1 engineering/architecture foundation tracks** have documented closeout or implementation through their defined closeout boundary. This says nothing about the percentage completion of the **entire** IMAS vision.
