@@ -8,116 +8,6 @@
 
 > **Public overview.** This repository presents the mission, system vision, engineering philosophy, current foundations, and long-term roadmap of IMAS. The main implementation and detailed engineering artifacts are maintained privately. The architecture and roadmap described here include both existing foundations and future objectives; they should not be read as a claim that every capability is already operational.
 
-## Project at a Glance — Verified Engineering Snapshot
-
-**Measured 17 October 2026** · Fixed source commit: `efb8723c92ad355f7f288023f1da99214fb29c6d` · **cloc 2.10** · Git-tracked files with documented exclusions.
-
-| **1,278,820** physical lines | **1,088,258** cloc-classified code lines | **7,573** counted files | **255** verified PKR tests |
-| :---: | :---: | :---: | :---: |
-| Includes code, comments and blanks | Includes Python, JSON, Markdown and configuration | From **7,726** Git-tracked files | Passed on **both Python 3.12 and 3.13** |
-
-> **Reading the numbers correctly:** The 1,088,258 figure is the `cloc code` category **across all recognized file types**, including prose in Markdown and data in JSON. It is **not** 1.09 million lines of executable application code. The 255 tests are the **same scoped `tests/pkr` tests** passing in two Python environments—not 510 distinct tests or evidence of a full-project test-suite pass.
-
-### Language and Content Distribution
-
-Share of the **1,088,258 cloc-classified code lines**:
-
-| Language / content | Counted files | cloc code lines | Share |
-| --- | ---: | ---: | ---: |
-| **Python** | 2,599 | **784,669** | **72.10%** |
-| **JSON** | 4,285 | **209,161** | **19.22%** |
-| **Markdown** | 681 | **93,718** | **8.61%** |
-| Other (YAML, PowerShell, TOML, Text) | 8 | 710 | 0.07% |
-| **Total** | **7,573** | **1,088,258** | **100%** |
-
-~~~text
-Python    72.10%  ██████████████████░░░░░░░
-JSON      19.22%  █████░░░░░░░░░░░░░░░░░░░░
-Markdown   8.61%  ██░░░░░░░░░░░░░░░░░░░░░░░
-Other      0.07%  ▏
-~~~
-
-### Program Build Snapshot
-
-A phase-level view of the **documented engineering program**. Solid blocks mark a closed **architecture foundation**; shaded blocks indicate an **active transition**; empty blocks indicate **future phases**. Bars are **status markers, not completion percentages**.
-
-~~~text
-IMAS — Build Program
-
-Phase 1   — Core Architecture Foundations ......... CLOSED (foundation)    ████████████████████
-Phase 1.5 — Integration & Operationalization ...... ACTIVE TRANSITION      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-Phase 2   — Stabilization & Capital Scaling ....... NOT YET ENTERED        ░░░░░░░░░░░░░░░░░░░░
-Phase 3   — Advanced Engines & Adaptation ......... FUTURE ROADMAP         ░░░░░░░░░░░░░░░░░░░░
-Phase 4   — Platformization & Expansion .......... FUTURE ROADMAP          ░░░░░░░░░░░░░░░░░░░░
-~~~
-
-**Phase 1 architecture/foundation closeout is not product completion.** Phase 1.5 is the current operational integration and validation transition; entry into subsequent phases requires separate criteria and authorization.
-
-### Phase 1 — EPIC-by-EPIC Foundation Snapshot
-
-~~~text
-EPIC 1 — Market Data & Intelligence .............. FOUNDATION CLOSED     ████████████████████
-EPIC 2 — Strategy & Decision Layer ............... FOUNDATION CLOSED     ████████████████████
-EPIC 3 — Execution Layer ......................... FOUNDATION CLOSED     ████████████████████
-EPIC 4 — Risk & Portfolio Layer .................. FOUNDATION CLOSED     ████████████████████
-EPIC 5 — Execution Plane, Evaluation & Live Gate . ARCH. CLOSEOUT 5.24   ████████████████████
-~~~
-
-All **five Phase 1 engineering/architecture foundation tracks** have documented closeout or implementation through their defined closeout boundary. This says nothing about the percentage completion of the **entire** IMAS vision.
-
-### MVP Acceptance and Operational Readiness
-
-~~~text
-MVP-1 — End-to-End Operational Integration ....... ACCEPTANCE NOT ESTABLISHED
-MVP-2 — Economically Validated Operation ......... ACCEPTANCE NOT ESTABLISHED
-
-Production / Live-Capital Authorization .......... NOT ESTABLISHED
-~~~
-
-- **MVP-1** requires a connected and measured end-to-end operational flow, including authorized non-production execution, factual results and evaluation.
-- **MVP-2** requires separate, realistic economic evidence after operational integration; profitable or sustainable performance must not be presumed.
-- **Controlled-live / production permissions** require explicit scoped authorization and cannot be inferred from EPIC closeout, CI success or an architecture diagram.
-
-**Status basis:** canonical project-state and Phase 1 → Phase 2 transition planning at the same fixed-commit snapshot used for the engineering measurements above. These indicators are **qualitative milestone states**, not newly calculated progress percentages.
-
-### Quality Evidence and Measurement Scope
-
-The fixed-commit CI record confirms **255 PKR tests passed** on **Python 3.12** and **Python 3.13**, separately. No complete test-suite PASS, all-system integration acceptance, economic edge, production readiness, or live-capital authorization is established by this snapshot.
-
-<details>
-<summary>Detailed line counts, historical size reference, and reproducibility method</summary>
-
-**Line categories (cloc 2.10):**
-
-| Category | Lines |
-| --- | ---: |
-| Nonblank, noncomment (`code`) | 1,088,258 |
-| Comments | 17,485 |
-| Blank | 173,077 |
-| **Total physical lines** | **1,278,820** |
-
-**Major tracked path groups** (the groups below are not exhaustive):
-
-| File area | Counted files | cloc code lines |
-| --- | ---: | ---: |
-| Application source (`src/**`) | 1,021 | 477,003 |
-| Test assets (`tests/**`) | 1,591 | 307,124 |
-| Engineering documentation (`docs/**`) | 242 | 63,962 |
-
-Of the source path's classified content, Python represents **476,910** code lines in **1,015** files. Of the test path's classified content, Python represents **304,638** code lines in **1,569** files. These counts are not coverage or numbers of passed tests.
-
-**Historical reference:** An earlier overview reported **968 counted files** and **178,690 cloc code lines**. The fixed snapshot reports **7,573** and **1,088,258** respectively—an arithmetic ratio of **7.82×** files and **6.09×** cloc code lines. The historical snapshot's exact commit, raw cloc report, and tool version were not independently reconstructed, so these are **descriptive size comparisons**, not a controlled growth metric or a measure of maturity.
-
-**Reproducibility:** Measured on Git-tracked files at commit `efb8723c92ad355f7f288023f1da99214fb29c6d` with:
-
-~~~bash
-cloc . --vcs=git --exclude-dir=.git,.venv,venv,dist,build,tmp,obsidian,node_modules,.pytest_cache,__pycache__,htmlcov,.mypy_cache --json --out=cloc_tracked.json
-~~~
-
-The matching non-VCS `cloc .` run gave identical per-language counts at the same clean checkout. **153 tracked files** were not counted, including the explicitly excluded knowledge-vault directory, zero-byte files, unrecognized/non-code files, and a binary fixture. Counts are a **fixed historical measurement** and should be remeasured on any newer baseline before being described as current.
-
-</details>
-
 ---
 
 ## 1. What Is IMAS?
@@ -370,7 +260,7 @@ This repository is the **public-facing description of IMAS**. It does not contai
 
 ### Metrics and progress reporting
 
-The **Project at a Glance** section near the top of this README contains a reproducible, fixed-commit engineering scale measurement (17 October 2026, cloc 2.10), plus scoped CI evidence and documented milestone statuses. Its counts are **not** software maturity, test coverage, project completion percentages, economic validation, or operational/live readiness. The old overview's line counts and progress percentages are retained in Git history as historical reference only. Future updates must explicitly name the source commit and evidence scope.
+The **Project at a Glance** section at the end of this README contains a reproducible, fixed-commit engineering scale measurement (17 October 2026, cloc 2.10), plus scoped CI evidence and documented milestone statuses. Its counts are **not** software maturity, test coverage, project completion percentages, economic validation, or operational/live readiness. The old overview's line counts and progress percentages are retained in Git history as historical reference only. Future updates must explicitly name the source commit and evidence scope.
 
 ## 12. About the Author
 
@@ -386,3 +276,115 @@ IMAS is an ongoing research and engineering project. It is not an investment adv
 ---
 
 **IMAS in one sentence:** Building an intelligent multi-agent system that turns trustworthy time-series and contextual data into evidence-based decisions, governed automation, authorized execution, and measurable continuous improvement—beginning with a rigorously engineered financial-market application.
+
+---
+
+## Project at a Glance — Verified Engineering Snapshot
+
+**Measured 17 October 2026** · Fixed source commit: `efb8723c92ad355f7f288023f1da99214fb29c6d` · **cloc 2.10** · Git-tracked files with documented exclusions.
+
+| **1,278,820** physical lines | **1,088,258** cloc-classified code lines | **7,573** counted files | **255** verified PKR tests |
+| :---: | :---: | :---: | :---: |
+| Includes code, comments and blanks | Includes Python, JSON, Markdown and configuration | From **7,726** Git-tracked files | Passed on **both Python 3.12 and 3.13** |
+
+> **Reading the numbers correctly:** The 1,088,258 figure is the `cloc code` category **across all recognized file types**, including prose in Markdown and data in JSON. It is **not** 1.09 million lines of executable application code. The 255 tests are the **same scoped `tests/pkr` tests** passing in two Python environments—not 510 distinct tests or evidence of a full-project test-suite pass.
+
+### Language and Content Distribution
+
+Share of the **1,088,258 cloc-classified code lines**:
+
+| Language / content | Counted files | cloc code lines |
+| --- | ---: | ---: |
+| **Python** | 2,599 | **784,669** |
+| **JSON** | 4,285 | **209,161** |
+| **Markdown** | 681 | **93,718** |
+| Other (YAML, PowerShell, TOML, Text) | 8 | 710 |
+| **Total** | **7,573** | **1,088,258** |
+
+~~~text
+Python    72.10%  ██████████████████░░░░░░░
+JSON      19.22%  █████░░░░░░░░░░░░░░░░░░░░
+Markdown   8.61%  ██░░░░░░░░░░░░░░░░░░░░░░░
+Other      0.07%  ▏
+~~~
+
+### Program Build Snapshot
+
+A phase-level view of the **documented engineering program**. Solid blocks mark a closed **architecture foundation**; shaded blocks indicate an **active transition**; empty blocks indicate **future phases**. Bars are **status markers, not completion percentages**.
+
+~~~text
+IMAS — Build Program
+
+Phase 1   — Core Architecture Foundations ......... CLOSED (foundation)    ████████████████████
+Phase 1.5 — Integration & Operationalization ...... ACTIVE TRANSITION      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+Phase 2   — Stabilization & Capital Scaling ....... NOT YET ENTERED        ░░░░░░░░░░░░░░░░░░░░
+Phase 3   — Advanced Engines & Adaptation ......... FUTURE ROADMAP         ░░░░░░░░░░░░░░░░░░░░
+Phase 4   — Platformization & Expansion .......... FUTURE ROADMAP          ░░░░░░░░░░░░░░░░░░░░
+~~~
+
+**Phase 1 architecture/foundation closeout is not product completion.** Phase 1.5 is the current operational integration and validation transition; entry into subsequent phases requires separate criteria and authorization.
+
+### Phase 1 — EPIC-by-EPIC Foundation Snapshot
+
+~~~text
+EPIC 1 — Market Data & Intelligence .............. FOUNDATION CLOSED     ████████████████████
+EPIC 2 — Strategy & Decision Layer ............... FOUNDATION CLOSED     ████████████████████
+EPIC 3 — Execution Layer ......................... FOUNDATION CLOSED     ████████████████████
+EPIC 4 — Risk & Portfolio Layer .................. FOUNDATION CLOSED     ████████████████████
+EPIC 5 — Execution Plane, Evaluation & Live Gate . ARCH. CLOSEOUT 5.24   ████████████████████
+~~~
+
+All **five Phase 1 engineering/architecture foundation tracks** have documented closeout or implementation through their defined closeout boundary. This says nothing about the percentage completion of the **entire** IMAS vision.
+
+### MVP Acceptance and Operational Readiness
+
+~~~text
+MVP-1 — End-to-End Operational Integration ....... ACCEPTANCE NOT ESTABLISHED
+MVP-2 — Economically Validated Operation ......... ACCEPTANCE NOT ESTABLISHED
+
+Production / Live-Capital Authorization .......... NOT ESTABLISHED
+~~~
+
+- **MVP-1** requires a connected and measured end-to-end operational flow, including authorized non-production execution, factual results and evaluation.
+- **MVP-2** requires separate, realistic economic evidence after operational integration; profitable or sustainable performance must not be presumed.
+- **Controlled-live / production permissions** require explicit scoped authorization and cannot be inferred from EPIC closeout, CI success or an architecture diagram.
+
+**Status basis:** canonical project-state and Phase 1 → Phase 2 transition planning at the same fixed-commit snapshot used for the engineering measurements above. These indicators are **qualitative milestone states**, not newly calculated progress percentages.
+
+### Quality Evidence and Measurement Scope
+
+The fixed-commit CI record confirms **255 PKR tests passed** on **Python 3.12** and **Python 3.13**, separately. No complete test-suite PASS, all-system integration acceptance, economic edge, production readiness, or live-capital authorization is established by this snapshot.
+
+<details>
+<summary>Detailed line counts, historical size reference, and reproducibility method</summary>
+
+**Line categories (cloc 2.10):**
+
+| Category | Lines |
+| --- | ---: |
+| Nonblank, noncomment (`code`) | 1,088,258 |
+| Comments | 17,485 |
+| Blank | 173,077 |
+| **Total physical lines** | **1,278,820** |
+
+**Major tracked path groups** (the groups below are not exhaustive):
+
+| File area | Counted files | cloc code lines |
+| --- | ---: | ---: |
+| Application source (`src/**`) | 1,021 | 477,003 |
+| Test assets (`tests/**`) | 1,591 | 307,124 |
+| Engineering documentation (`docs/**`) | 242 | 63,962 |
+
+Of the source path's classified content, Python represents **476,910** code lines in **1,015** files. Of the test path's classified content, Python represents **304,638** code lines in **1,569** files. These counts are not coverage or numbers of passed tests.
+
+**Historical reference:** An earlier overview reported **968 counted files** and **178,690 cloc code lines**. The fixed snapshot reports **7,573** and **1,088,258** respectively—an arithmetic ratio of **7.82×** files and **6.09×** cloc code lines. The historical snapshot's exact commit, raw cloc report, and tool version were not independently reconstructed, so these are **descriptive size comparisons**, not a controlled growth metric or a measure of maturity.
+
+**Reproducibility:** Measured on Git-tracked files at commit `efb8723c92ad355f7f288023f1da99214fb29c6d` with:
+
+~~~bash
+cloc . --vcs=git --exclude-dir=.git,.venv,venv,dist,build,tmp,obsidian,node_modules,.pytest_cache,__pycache__,htmlcov,.mypy_cache --json --out=cloc_tracked.json
+~~~
+
+The matching non-VCS `cloc .` run gave identical per-language counts at the same clean checkout. **153 tracked files** were not counted, including the explicitly excluded knowledge-vault directory, zero-byte files, unrecognized/non-code files, and a binary fixture. Counts are a **fixed historical measurement** and should be remeasured on any newer baseline before being described as current.
+
+</details>
