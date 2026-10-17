@@ -37,20 +37,48 @@ Markdown   8.61%  ██░░░░░░░░░░░░░░░░░░�
 Other      0.07%  ▏
 ~~~
 
-### Engineering Milestones and Product Readiness
+### Program Build Snapshot
 
-| Milestone | Evidence-backed status |
-| --- | --- |
-| **EPIC 1 — Market Data & Intelligence** | Documented foundation closeout |
-| **EPIC 2 — Strategy & Decision** | Documented foundation closeout |
-| **EPIC 3 — Execution Layer** | Documented foundation closeout |
-| **EPIC 4 — Risk & Portfolio** | Documented foundation closeout |
-| **EPIC 5 — Execution Plane, Evaluation & Governance** | Documented engineering / architecture closeout through Sub-Epic **5.24** |
-| **Phase 1.5 / MVP-1 — Operational integration** | Integration and operational acceptance **not yet established** by the measurement |
-| **MVP-2 — Economic validation** | Economic acceptance and sustainable performance **not established** |
-| **Phases 2–4 — Robustness, adaptive intelligence & platformization** | Conditional longer-term roadmap; no completion claim |
+A phase-level view of the **documented engineering program**. Solid blocks mark a closed **architecture foundation**; shaded blocks indicate an **active transition**; empty blocks indicate **future phases**. Bars are **status markers, not completion percentages**.
 
-**Foundation milestone summary:** **5 of 5** original EPIC 1–5 engineering/architecture foundations are documented as closed or implemented through their defined closeout boundary. This **does not mean the product, operational MVP, broader roadmap, or economic objectives are 100% complete**.
+~~~text
+IMAS — Build Program
+
+Phase 1   — Core Architecture Foundations ......... CLOSED (foundation)    ████████████████████
+Phase 1.5 — Integration & Operationalization ...... ACTIVE TRANSITION      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+Phase 2   — Stabilization & Capital Scaling ....... NOT YET ENTERED       ░░░░░░░░░░░░░░░░░░░░
+Phase 3   — Advanced Engines & Adaptation ......... FUTURE ROADMAP        ░░░░░░░░░░░░░░░░░░░░
+Phase 4   — Platformization & Expansion .......... FUTURE ROADMAP        ░░░░░░░░░░░░░░░░░░░░
+~~~
+
+**Phase 1 architecture/foundation closeout is not product completion.** Phase 1.5 is the current operational integration and validation transition; entry into subsequent phases requires separate criteria and authorization.
+
+### Phase 1 — EPIC-by-EPIC Foundation Snapshot
+
+~~~text
+EPIC 1 — Market Data & Intelligence .............. FOUNDATION CLOSED     ████████████████████
+EPIC 2 — Strategy & Decision Layer ............... FOUNDATION CLOSED     ████████████████████
+EPIC 3 — Execution Layer ......................... FOUNDATION CLOSED     ████████████████████
+EPIC 4 — Risk & Portfolio Layer .................. FOUNDATION CLOSED     ████████████████████
+EPIC 5 — Execution Plane, Evaluation & Live Gate . ARCH. CLOSEOUT 5.24  ████████████████████
+~~~
+
+All **five Phase 1 engineering/architecture foundation tracks** have documented closeout or implementation through their defined closeout boundary. This says nothing about the percentage completion of the **entire** IMAS vision.
+
+### MVP Acceptance and Operational Readiness
+
+~~~text
+MVP-1 — End-to-End Operational Integration ....... ACCEPTANCE NOT ESTABLISHED
+MVP-2 — Economically Validated Operation ......... ACCEPTANCE NOT ESTABLISHED
+
+Production / Live-Capital Authorization .......... NOT ESTABLISHED
+~~~
+
+- **MVP-1** requires a connected and measured end-to-end operational flow, including authorized non-production execution, factual results and evaluation.
+- **MVP-2** requires separate, realistic economic evidence after operational integration; profitable or sustainable performance must not be presumed.
+- **Controlled-live / production permissions** require explicit scoped authorization and cannot be inferred from EPIC closeout, CI success or an architecture diagram.
+
+**Status basis:** canonical project-state and Phase 1 → Phase 2 transition planning at the same fixed-commit snapshot used for the engineering measurements above. These indicators are **qualitative milestone states**, not newly calculated progress percentages.
 
 ### Quality Evidence and Measurement Scope
 
