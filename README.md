@@ -1,85 +1,114 @@
-# AutoTrade Core — Project Overview
+# MATSA-DS Project
 
-Because the repository and source code are private, this document provides a high-level explanation of the project **without exposing source code, internal implementation details, or proprietary technical decisions**.
+**Multi-Agent Time-Series Analytics & Decision Systems**
 
-This file is intended for non-technical or semi-technical readers who need to understand what the project is, what has already been completed, and what comes next.
+*Research and engineering of reliable time-series analytics, evidence-based decision systems, and governed multi-agent workflows.*
 
----
+> **Public project overview.** This repository explains the project's purpose, approach, scope, and direction. The implementation repository and detailed engineering artifacts remain private. MATSA-DS is a descriptive research-project name, not a commercial product brand.
 
-## What the Project Is
+## Overview
 
-AutoTrade Core is a private engineering project focused on building a **reliable, deterministic, contract-driven foundation for algorithmic trading systems**.
+MATSA-DS explores how structured data, time-series analysis, specialist reasoning, and decision systems can work together in an auditable engineering platform. Its central focus is understanding **change over time**—including patterns, trends, anomalies, context, uncertainty, and the decisions that follow from them.
 
-It is not being built as a quick trading bot or as a set of disconnected scripts.  
-It is being built as a structured platform that can support:
+The project began with **AutoTrade Core**, a private, deterministic and contract-driven engineering foundation for financial-market data, strategy decisions, execution, risk, and evaluation. That implementation remains the project's primary concrete application. The broader MATSA-DS identity makes room for future business and operational analytics **without suggesting that those additional applications already exist**.
 
-- market-data handling
-- descriptive and intelligence layers
-- decision systems
-- execution systems
-- risk and portfolio control layers
-- evaluation and go-live decision layers
-- future product and automation expansion
+## Mission
 
-This document is a **high-level overview only**.  
-It intentionally avoids source code, internal implementation details, and proprietary design specifics.
+Build dependable systems that can:
 
----
+- ingest, validate, and contextualize time-indexed data;
+- analyze charts, time-series behavior, patterns, and changes in conditions;
+- turn analytical evidence into reviewable decision candidates or decision-support outputs;
+- coordinate specialized responsibilities without losing ownership, traceability, or human control;
+- evaluate decisions and system behavior through reproducible evidence; and
+- evolve from a validated application into additional domains where that expansion is justified.
 
+**Charts are a key analytical interface, but the underlying subject is time-series data.** Chart interpretation here includes structured numerical analysis and visual exploration; it does not imply that every form of image-based chart understanding is already implemented.
 
-## What the Project Is Trying to Build
+## Why Multi-Agent?
 
-The long-term goal of AutoTrade Core is to create a trading platform that can:
+**Multi-Agent describes the intended system-wide architecture**, not merely an isolated decision component.
 
-- process market data in a reliable and repeatable way
-- support research and strategy development
-- provide a clean decision layer for trading logic
-- provide a governed execution layer
-- provide a capital-aware Risk / Portfolio foundation
-- support evaluation and go-live decision layers
-- grow into a broader platform over time
+Today, the engineering workflow already uses governed, role-separated collaboration for management, architecture, and bounded execution. The longer-term product architecture also envisions cooperating specialist capabilities—for example, data analysis, pattern research, contextual interpretation, critical review, risk evaluation, and decision support.
 
-In simple terms:
+Those capabilities must operate with explicit boundaries and reviewable evidence. **A multi-agent research direction is not a claim that a fully autonomous, integrated, production-ready agent team already operates the product.** No agent recommendation on its own grants permission to execute a consequential action.
 
-**the project is building the infrastructure first, so later trading behavior can be built on top of a strong foundation rather than on shortcuts.**
+## Conceptual System Flow
 
----
+```text
+Time-indexed observations
+          ↓
+Data quality, integrity & provenance
+          ↓
+Features, context & time-series analytics
+          ↓
+Patterns, scenarios & analytical evidence
+          ↓
+Decision candidates and evaluation
+          ↓
+Risk, policy, permission & safety controls
+          ↓
+Governed outcomes / authorized actions
+          ↓
+Traceability, feedback & reproducible review
+```
 
-## Why This Project Exists
+This is a conceptual target flow, not a declaration that each stage already runs as one end-to-end autonomous system. The current financial implementation has its own documented contract and ownership boundaries.
 
-Many trading systems become difficult to trust as they grow.  
-They often start as small experiments and then turn into a mixture of indicators, scripts, exceptions, and hidden assumptions.
+## Current Engineering Foundation
 
-AutoTrade Core is taking a different path.
+The private AutoTrade Core implementation documents foundations across:
 
-The project is being developed around a few clear principles:
+- deterministic historical and live-market descriptive data handling;
+- feature generation and structured market context;
+- strategy and decision-layer contracts and runtime behavior;
+- execution planning, order/fill semantics, and bounded runtime interfaces;
+- risk and portfolio state, exposure, valuation, and safety boundaries;
+- execution-plane, evaluation, evidence, approval, and controlled-live gate models;
+- local CLI/API and review-oriented surfaces; and
+- testing, governance, reproducibility, and architectural controls.
 
-- **reliability before speed**
-- **clarity before shortcuts**
-- **repeatability before convenience**
-- **architecture before feature sprawl**
-- **long-term scalability over temporary hacks**
+These areas include implemented and documented foundations. **Implemented contracts, passed tests, integrated operational behavior, economic validation, and live-operation authorization are different states.** None should be inferred from the others.
 
-That makes progress slower at the beginning, but much stronger later.
+## Applications and Scope
 
----
+| Area | Position in the project |
+| --- | --- |
+| **Financial and market time series** | Existing primary implementation and validation domain |
+| **Chart, pattern and regime analysis** | Central analytical direction, with existing data/feature foundations and further research planned |
+| **Multi-agent analysis and decision support** | System-wide architectural direction; capability maturity must be validated per component |
+| **Business and operational analytics** | Potential future applications, not current implementation claims |
+| **Broader research and domain expansion** | Conditional on evidence, integration, and explicit planning |
 
-## Current Status
+MATSA-DS is therefore **not limited to trading**, while its present software heritage and most developed application remain financial-market systems.
 
-### Project milestone
+## Engineering Principles
 
-**EPIC 1 is complete.**  
-**EPIC 2 is complete.**  
-**EPIC 3 is complete.**  
-**EPIC 4 is complete.**
-**EPIC 5 is complete.**
+- **Evidence over claims:** observed behavior and reproducible measurements matter more than feature counts.
+- **Correctness over shortcuts:** explicit contracts, deterministic behavior where required, and controlled change.
+- **Integration before expansion:** connect and verify existing capabilities before broadening scope.
+- **Separation of responsibilities:** clear boundaries for data, analysis, decisions, risk, execution, and authority.
+- **Human and system governance:** specialist outputs are inputs to a controlled process, not automatic authorization.
+- **Auditable evolution:** tests, provenance, review, and failure analysis are part of the engineering product.
 
-This means the project now has a closed and working:
+## Current Direction
 
-- **descriptive / market-intelligence foundation** from EPIC 1
-- **Strategy Engine / Decision Layer foundation** from EPIC 2
-- **Execution Layer foundation** from EPIC 3
-- **Risk / Portfolio foundation layer** from EPIC 4
+The near-term priority is to **integrate and validate existing foundations as a coherent, observable end-to-end system**. Work proceeds through realistic scenarios, evaluation, reliability improvement, and explicit safety controls. Additional analytical and agent capabilities should follow demonstrated requirements rather than being added for their own sake.
+
+The evaluation and controlled-live gate **models** are part of the documented core architecture. Their existence does **not** by itself authorize live-capital activity, prove economic performance, or establish production readiness.
+
+## Technology and Repository Boundaries
+
+The core implementation is primarily Python, supported by structured contracts, configuration, automated tests, and documentation. This public repository is **an overview only**: it does not publish the private source code, confidential implementation details, or operational credentials.
+
+The name **MATSA-DS Project** describes the wider research and engineering effort. **AutoTrade Core** remains the name of the existing private implementation while any codebase renaming is considered separately.
+
+## Historical Metrics & Progress — Pending Update
+
+The material below is copied from the former AutoTrade public overview **without recalculating its figures**. It is a legacy snapshot, not the current MATSA-DS measurement baseline. Some historic progress statements are internally inconsistent or outdated; do not use them as evidence of current completeness, test totals, or production readiness. Figures will be reviewed in the **separate metrics update**.
+
+<details>
+<summary>Show legacy figures and progress snapshot (not current)</summary>
 
 ### Current position in the broader build plan
 
@@ -165,228 +194,19 @@ This matters because the project is not only growing in size; it is being develo
 
 ---
 
-## What Has Been Completed So Far
-
-By the end of EPIC 1, EPIC 2, EPIC 3, and EPIC 4, the project has built the four core foundation layers required before formal evaluation and go-live work can be trusted.
-
-That completed foundation includes:
-
-- **historical market data foundation**
-- **live deterministic market-event and candle processing**
-- **feature and indicator infrastructure**
-- **market context construction**
-- **integrity, audit, and quality-governance layers**
-- **a first non-price data extension boundary**
-- **a canonical Strategy Engine / Decision Layer**
-- **deterministic strategy runtime and orchestration semantics**
-- **decision logging, audit, parity, and hardening surfaces**
-- **a canonical execution contract family**
-- **decision-to-execution translation and admission foundations**
-- **order identity and lifecycle foundations**
-- **fill, execution outcome, fee, and slippage foundations**
-- **execution adapter/runtime foundations**
-- **execution-layer classification, alignment, and freeze-ready closeout anchors**
-- **Risk / Portfolio boundary contracts**
-- **sizing and capital semantics**
-- **exposure-control semantics**
-- **portfolio state and mutation semantics**
-- **valuation, equity, PnL, and accounting-boundary semantics**
-- **runtime/review/reporting interpretation semantics**
-- **Risk / Portfolio ownership map**
-- **Risk / Portfolio boundary seam registry**
-- **Risk / Portfolio deferred ownership registry**
-- **Risk / Portfolio evaluation handoff contract**
-- **Risk / Portfolio change policy**
-- **Risk / Portfolio readiness verification harness**
-- **final Risk / Portfolio layer readiness gate**
-
-In practical terms, the project can now:
-
-- organize and process market information consistently
-- preserve repeatability across runs
-- detect and surface quality issues instead of hiding them
-- prepare structured market-state outputs for downstream strategy layers
-- produce controlled decision-layer outputs on top of governed descriptive truth
-- define controlled execution-layer meaning on top of governed decision truth
-- define capital-aware Risk / Portfolio foundation semantics on top of governed execution truth
-- provide a strong engineering base for evaluation, go-live governance, and later controlled live-readiness work
-
----
-
-## What the Platform Can Do After EPIC 4
-
-At this stage, the platform is no longer only a data, decision, or execution foundation.
-
-It can now function as a **serious descriptive, decision, execution, and Risk / Portfolio foundation**.
-
-That means it can already support:
-
-- structured market data ingestion and handling
-- deterministic processing of historical and live market information
-- repeatable feature computation
-- market-state preparation for downstream strategy layers
-- deterministic strategy / decision-layer behavior on top of canonical descriptive truth
-- controlled execution-layer semantics after accepted decision outputs
-- order / fill / execution-outcome interpretation
-- bounded simulated execution posture and execution-facing runtime/reporting outputs
-- canonical Risk / Portfolio ownership boundaries
-- sizing, exposure, portfolio-state, valuation, and PnL foundation semantics
-- bounded accounting-boundary posture
-- explicit deferred ownership for accounting, settlement, reconciliation, productization, live-provider operations, and go-live authorization
-- machine-checkable readiness for downstream evaluation/governance consumption
-- audit-friendly and review-friendly engineering workflows
-- future expansion without reopening the upstream foundations
-
-This is a major milestone because many system failures happen when projects try to build evaluation or live-capital logic on top of weak descriptive, decision, execution, or risk foundations.  
-Those upstream and Risk / Portfolio layers are now closed through EPIC 4.
-
----
-
-## What Has Not Been Closed Yet
-
-Even after EPIC 4, the project is **not** yet a live-capital-authorized trading product.
-
-The following are intentionally still outside the closed scope:
-
-- full live-trading implementation
-- evaluation and go-live judgment ownership
-- final go-live approval criteria
-- settlement / bookkeeping / accounting ownership
-- broker or external-account reconciliation
-- production operator tooling
-- broader platform/product concerns
-
-This is intentional.
-
-The project is being built in the following order:
-
-**foundation → decisions → execution → risk/control → evaluation → productization**
-
-Risk / Portfolio readiness is not go-live authorization.
-
----
-
-## What Comes Next
-
-The next major stage is expected to introduce the **Evaluation & Go-Live Gate**.
-
-That is where the platform is expected to begin defining:
-
-- end-to-end validation
-- deterministic backtest validation
-- paper-trading validation
-- evaluation evidence
-- performance and risk acceptance criteria
-- go-live checklist and approval boundary
-- final pre-live gate criteria
-
-After that, later work is expected to introduce:
-
-- controlled live-readiness work
-- broader operational controls
-- capital scaling after evidence
-- larger platform/product capabilities
-
----
-
-## What Phase 1 Is Expected to Achieve
-
-When the broader Phase 1 program is finished, the project is expected to support:
-
-- deterministic market-data handling
-- structured decision-making layers
-- controlled execution infrastructure
-- capital/risk protection layers
-- evaluation and deployment readiness checks
-- explicit go-live approval gates
-
-So EPIC 1, EPIC 2, EPIC 3, and EPIC 4 should be understood as:
-
-**the completed descriptive, decision, execution, and Risk / Portfolio foundation of the core trading program, not the final live-authorized product.**
-
----
-
-## Technology Stack
-
-The project is built primarily in:
-
-- **Python** as the main implementation language
-- structured documentation and configuration files
-- automated testing and validation workflows
-
-For a non-technical reader, the important point is simple:
-
-**the project is being built as a serious software system, not as a one-off prototype.**
-
----
-
-## What Makes the Project Different
-
-AutoTrade Core is not trying to impress through flashy demos first.
-
-Its real strength is in how it is being built:
-
-- carefully
-- systematically
-- with long-term structure
-- with visible progress
-- with room for future growth
-
-The aim is to create something that can become dependable, explainable, and extensible — not something that works once and collapses when complexity increases.
-
----
-
-## Repository Scope
-
-This repository is private.
-
-The purpose of this overview file is to explain:
-
-- what the project is
-- where it currently stands
-- what has already been achieved
-- what comes next
-
-It intentionally does **not** expose:
-
-- source code
-- private internal architecture details
-- proprietary implementation ideas
-- confidential design decisions
-
----
+</details>
 
 ## About the Author
 
-Majid Askary
+**Majid Askary** — engineering and systems architecture, with a focus on data-driven systems, multi-agent workflows, modular software, and applied research.
 
-AI Engineer & System Architect focused on:
+- [LinkedIn](https://www.linkedin.com/in/majidaskary)
+- [Contact](mailto:m.askary84@yahoo.com)
 
-- algorithmic trading infrastructure
-- data-driven systems
-- modular architecture
-- AI-assisted engineering workflows
+## Disclaimer
 
-### LinkedIn
-
-[https://www.linkedin.com/in/majidaskary](https://www.linkedin.com/in/majidaskary)
-
-### Contact
-
-[m.askary84@yahoo.com](mailto:m.askary84@yahoo.com)
+MATSA-DS is a research and engineering project, not an investment advisory or trading-signal service. Descriptions of planned capabilities are not claims of deployed functionality. No live-capital activity is implied or authorized by this document.
 
 ---
 
-# Disclaimer
-
-This project is an engineering and research initiative.
-
-It does not provide financial advice or trading signals.
-
-Risk / Portfolio readiness is not go-live authorization.
-
----
-
-## In One Sentence
-
-**AutoTrade Core is a private, large-scale software project building a deterministic, contract-driven, and scalable trading infrastructure — and EPIC 1 through EPIC 4 now close the descriptive, decision, execution, and Risk / Portfolio foundation that the final evaluation and go-live layer will build on.**
+**In one sentence:** MATSA-DS is a multi-agent-oriented research and engineering project for time-series analytics and governed decision systems, currently grounded in a private financial-market core and designed for carefully validated expansion into broader data-driven applications.
