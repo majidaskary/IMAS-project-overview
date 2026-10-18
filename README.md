@@ -1,4 +1,4 @@
-# MAAI Project
+<h1 align="center">MAAI Project</h1>
 
 ## Multi-Agent AI<br><small>for Time-Series Data Analytics, Decision-Making, Automation &amp; Execution</small>
 
