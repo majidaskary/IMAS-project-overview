@@ -131,7 +131,82 @@ Financial markets are the primary implementation and validation domain. The unde
 
 The roadmap is deliberately staged: operational integration first, realistic economic evaluation next, and more advanced intelligence or platform capabilities only when the evidence and conditions justify them.
 
-## 8. About This Repository and the Author
+## 8. Multi-Agent Architecture and Responsibilities
+
+MAAI is designed around **cooperating specialist functions**, not one model making every decision. In the proposed runtime architecture, agents may examine evidence, challenge conclusions, and recommend actions, while the system keeps factual records, risk controls, and execution permissions explicit.
+
+| Specialist function | Intended responsibility |
+| --- | --- |
+| **Data and market intelligence** | Check input quality and timing; analyze technical patterns, changing market regimes, and contextual evidence. |
+| **Strategy and portfolio reasoning** | Compare candidate strategies, estimate uncertainty, and consider exposure, concentration, and correlation. |
+| **Risk and policy assessment** | Check constraints, identify unsafe decisions, and distinguish a recommendation from permission to act. |
+| **Execution support** | Plan permitted actions, assess costs and operational constraints, and report execution outcomes. |
+| **Critique, evaluation, and research** | Challenge assumptions, investigate failures, compare results with baselines, and propose testable improvements. |
+
+An important design rule is that **an agent's suggestion is not a verified fact or an execution authorization**. State, evidence, approvals, and operator controls need their own accountable boundaries.
+
+**Maturity distinction:** The development process already uses structured human–AI collaboration with separated responsibilities. That engineering workflow is different from a fully integrated team of autonomous **runtime** agents; the latter remains an architectural objective.
+
+## 9. Data, Analytics, and Contextual Intelligence
+
+The analytical foundation is intended to connect **time-series observations** with the context needed to interpret them. Good decisions depend on data that can be checked for source, time, completeness, and consistency—not just on sophisticated models.
+
+Research and engineering directions include:
+
+- **Market data foundations:** historical, representative, and eventually appropriate live inputs; validation, normalization, timestamps, and provenance.
+- **Technical and quantitative analysis:** price action, volume, trends, volatility, momentum, patterns, statistics, and multi-timeframe or cross-asset comparisons.
+- **Condition-aware research:** market regimes, anomalies, uncertainty, and testing when an indicator or strategy works and when it breaks down.
+- **Fundamental and macro context:** possible integration of financial, economic, news, and other external evidence where data quality and research justify it.
+- **Reliable knowledge:** traceable features, experiment history, and records that help compare new results with earlier findings.
+
+These describe the engineering foundation and research scope, **not a claim that all data sources, indicators, or intelligent analytical components are already integrated or operational**.
+
+## 10. Strategy, Portfolio, and Decision Intelligence
+
+The goal is to move beyond isolated trading signals toward **inspectable decisions**. A proposed action needs more than a model prediction: it needs assumptions, supporting evidence, confidence or uncertainty, and an explanation of the relevant constraints.
+
+The intended decision layer supports strategy comparison and selection, combinations of approaches, and responses to changing market regimes. Portfolio reasoning brings in position sizing, capital allocation, risk budgets, diversification, concentration, and correlation.
+
+A proposed decision can lead to different outcomes:
+
+1. **Proceed to review:** the idea has enough evidence to be evaluated against risk and policy constraints.
+2. **Revise or investigate:** uncertainty, conflicting information, or portfolio effects require more work.
+3. **Do nothing:** choosing **no trade** is a deliberate outcome when conditions do not justify action.
+
+**Decision, risk clearance, approval, and execution are separate steps.** A strong backtest or an AI recommendation alone does not establish permission to place a real order.
+
+## 11. Execution Engineering, Safety, and Operational Truth
+
+Execution means more than sending an order. The target execution plane connects approved intent to observable results through planning, orchestration, permissions, runtime behavior, and reconciliation.
+
+A controlled execution flow must distinguish:
+
+- **Requested action** from policy checks, approval, and actual authorization.
+- **Execution intent and order state** from fills, partial fills, rejection, cancellation, and failure handling.
+- **Expected performance** from realized costs such as spreads, fees, slippage, liquidity, and latency.
+- **Internal assumptions** from factual events, records, and measured outcomes.
+
+The architecture includes risk and authority boundaries, revocation, observability, recovery, and auditability. Its purpose is to make consequential actions **bounded, traceable, and interruptible**, with human oversight where required.
+
+The project's fifth engineering workstream covers execution planning, orchestration, canonical state and evidence, evaluation, and controlled-live gate models, with architecture closeout through Sub-Epic 5.24. **That foundation does not prove end-to-end operational acceptance, production readiness, or authorization for live-capital trading.**
+
+## 12. Evaluation, Reliability, and Controlled Learning
+
+MAAI treats **what actually happened** as distinct from what a simulation, model, or agent expected. The evaluation program therefore emphasizes reproducible experiments, independent records, and realistic constraints.
+
+| Evidence area | What needs to be established |
+| --- | --- |
+| **Testing and replay** | Repeatable behavior, correct state transitions, and handling of realistic scenarios and failures. |
+| **Simulation and backtesting** | Assumptions, transaction costs, market limitations, and comparisons with appropriate baselines. |
+| **Non-production operation** | Connected data-to-action-to-evaluation workflows with factual outcomes, without implying permission to trade live capital. |
+| **Economic evaluation** | Robustness, out-of-sample evidence, risk-adjusted results, and an honest account of uncertainty. |
+| **Change control** | Explainable, versioned, reviewable, reversible improvements; detection of drift or degraded performance. |
+
+Reliability also involves recovery, reconciliation, idempotent processing, least-privilege access, and operator control. A system should be able to explain **which data, decision, configuration, constraint, and execution event** contributed to an outcome.
+
+The acceptance gates remain distinct: **MVP-1** requires verified end-to-end operational integration; **MVP-2** requires separate economic validation. Neither has been accepted in the public snapshot, and neither can be inferred merely from architecture closeout or scoped CI tests.
+
+## 13. About This Repository and the Author
 
 This is the **public overview of MAAI Project (Multi-Agent AI)**. It shares the purpose, progress, and direction of the work, not the private core source code or operational infrastructure.
 
