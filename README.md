@@ -1,18 +1,18 @@
-# IMAS
+# MAAI Project
 
-## Intelligent Multi-Agent System
+## Multi-Agent AI
 
 ### for Time-Series Data Analytics, Decision-Making, Automation & Execution
 
-**A long-term research and engineering effort to develop an intelligent, evidence-driven, governable multi-agent system that can analyze information, make decisions, automate workflows, execute authorized actions, evaluate outcomes, and improve through controlled learning.**
+**A long-term research and engineering effort to build a governable multi-agent AI system that analyzes time-series and contextual data, makes evidence-backed decisions, automates workflows, executes authorized actions, evaluates outcomes, and improves through controlled learning.**
 
-> **Public overview.** This repository presents the mission, system vision, engineering philosophy, current foundations, and long-term roadmap of IMAS. The main implementation and detailed engineering artifacts are maintained privately. The architecture and roadmap described here include both existing foundations and future objectives; they should not be read as a claim that every capability is already operational.
+> **Public overview.** This repository presents the mission, system vision, engineering philosophy, current foundations, and long-term roadmap of MAAI. The main implementation and detailed engineering artifacts are maintained privately. The architecture and roadmap described here include both existing foundations and future objectives; they should not be read as a claim that every capability is already operational.
 
 ---
 
-## 1. What Is IMAS?
+## 1. What Is MAAI?
 
-**IMAS — Intelligent Multi-Agent System** is the identity of a research and engineering project whose central goal is to **build the system itself**, not merely use multi-agent technology as an accessory to an analytics application.
+**MAAI (Multi-Agent AI)** is a research and engineering project focused on building an integrated, intelligent multi-agent system. Its central goal is to **build the system itself**, rather than use AI agents merely as accessories to an analytics application.
 
 Its core focus is the complete lifecycle of intelligent, time-sensitive operations:
 
@@ -22,7 +22,7 @@ The project's first and most developed application is **a private financial-mark
 
 That economic performance is an objective to establish through realistic evidence, **not an achieved or guaranteed result**.
 
-Although financial markets are the primary proving ground, the IMAS identity reflects broader research into multi-agent intelligence, time-series data, decision systems, governed automation, and reusable platform architecture. Other applications are possibilities for future investigation, not claims of present implementations or already-approved roadmap commitments.
+Although financial markets are the primary proving ground, the MAAI identity reflects broader research into multi-agent intelligence, time-series data, decision systems, governed automation, and reusable platform architecture. Other applications are possibilities for future investigation, not claims of present implementations or already-approved roadmap commitments.
 
 ---
 
@@ -60,7 +60,7 @@ Other      0.07%  ▏
 A phase-level view of the **documented engineering program**. Solid blocks mark a closed **architecture foundation**; shaded blocks indicate an **active transition**; empty blocks indicate **future phases**. Bars are **status markers, not completion percentages**.
 
 ~~~text
-IMAS — Build Program
+MAAI — Build Program
 
 Phase 1   — Core Architecture Foundations ......... CLOSED (foundation)    ████████████████████
 Phase 1.5 — Integration & Operationalization ...... ACTIVE TRANSITION      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
@@ -81,7 +81,7 @@ EPIC 4 — Risk & Portfolio Layer .................. FOUNDATION CLOSED     █�
 EPIC 5 — Execution Plane, Evaluation & Live Gate . ARCH. CLOSEOUT 5.24   ████████████████████
 ~~~
 
-All **five Phase 1 engineering/architecture foundation tracks** have documented closeout or implementation through their defined closeout boundary. This says nothing about the percentage completion of the **entire** IMAS vision.
+All **five Phase 1 engineering/architecture foundation tracks** have documented closeout or implementation through their defined closeout boundary. This says nothing about the percentage completion of the **entire** MAAI vision.
 
 ### MVP Acceptance and Operational Readiness
 
@@ -140,7 +140,7 @@ The matching non-VCS `cloc .` run gave identical per-language counts at the same
 
 ## 2. Mission and North Star
 
-IMAS aims to bring together capabilities often developed in isolation and make them work as **one coherent, measurable, accountable operational system**.
+MAAI aims to bring together capabilities often developed in isolation and make them work as **one coherent, measurable, accountable operational system**.
 
 The intended outcome is a system that can:
 
@@ -157,7 +157,7 @@ The north star is **real operational competence supported by evidence**, rather 
 
 ## 3. The Four Functional Pillars
 
-The subtitle of IMAS describes four connected capabilities. They are not four independent products.
+The subtitle of MAAI describes four connected capabilities. They are not four independent products.
 
 ### Analytics — Time-Series Data and Contextual Intelligence
 
@@ -297,7 +297,7 @@ This is a **target product workflow**, not a claim that an end-to-end production
 
 ## 7. First Concrete Application: Financial-Market Engineering Core
 
-The private **financial-market engineering core** is the primary implementation and validation domain for IMAS. Financial markets provide a demanding environment in which analytical quality, execution behavior, safety, timing, evidence, and economic outcomes can be assessed together.
+The private **financial-market engineering core** is the primary implementation and validation domain for MAAI. Financial markets provide a demanding environment in which analytical quality, execution behavior, safety, timing, evidence, and economic outcomes can be assessed together.
 
 The documented engineering foundation includes:
 
@@ -330,7 +330,7 @@ Across these stages, the research program also develops technical and fundamenta
 
 ## 9. Evidence, Safety, and Operational Truth
 
-IMAS follows a strict engineering distinction:
+MAAI follows a strict engineering distinction:
 
 ~~~text
 Designed != Implemented
@@ -357,7 +357,7 @@ In practice:
 
 ## 10. Beyond the First Application
 
-IMAS is named around **time-series data and a multi-agent operating model**, not around one exchange, trading strategy, or product interface.
+MAAI's public description emphasizes **time-series data and a multi-agent operating model**, not one exchange, trading strategy, or product interface.
 
 The currently defined primary product remains the financial-market implementation. In the longer term, parts of the architecture might also inform other time-dependent decision environments—for example, operational monitoring or business/industrial analytics—**if separately researched, justified, governed, and added to an approved roadmap**.
 
@@ -365,16 +365,16 @@ This is a possible expansion direction, not an assertion that those domain-speci
 
 ## 11. Public Overview, Implementation, and Metrics
 
-This repository is the **public-facing description of IMAS**. It does not contain the private core implementation, confidential engineering artifacts, credentials, or operational infrastructure.
+This repository is the **public-facing description of MAAI**. It does not contain the private core implementation, confidential engineering artifacts, credentials, or operational infrastructure.
 
-- **IMAS** is the official abbreviated identity of **Intelligent Multi-Agent System**.
-- **IMAS Project** may be used as a natural reference to the research and engineering effort; the word *Project* is not part of the formal name.
+- **MAAI** stands for **Multi-Agent AI** and is the project's short name.
+- **MAAI Project** is the public-facing project title, covering the research and engineering effort and its potential future applications.
 - **The existing private financial-market core** remains the first concrete implementation. Its internal repository identity and naming may evolve independently of this public overview.
 - Current work, tests, architecture, and maturity are governed by the private repository's canonical sources and evidence, not by public marketing claims.
 
 ### Metrics and progress reporting
 
-The **Project at a Glance** section after the introductory **What Is IMAS?** section contains a reproducible, fixed-commit engineering scale measurement (17 October 2026, cloc 2.10), plus scoped CI evidence and documented milestone statuses. Its counts are **not** software maturity, test coverage, project completion percentages, economic validation, or operational/live readiness. The old overview's line counts and progress percentages are retained in Git history as historical reference only. Future updates must explicitly name the source commit and evidence scope.
+The **Project at a Glance** section after the introductory **What Is MAAI?** section contains a reproducible, fixed-commit engineering scale measurement (17 October 2026, cloc 2.10), plus scoped CI evidence and documented milestone statuses. Its counts are **not** software maturity, test coverage, project completion percentages, economic validation, or operational/live readiness. The old overview's line counts and progress percentages are retained in Git history as historical reference only. Future updates must explicitly name the source commit and evidence scope.
 
 ## 12. About the Author
 
@@ -385,8 +385,8 @@ The **Project at a Glance** section after the introductory **What Is IMAS?** sec
 
 ## Disclaimer
 
-IMAS is an ongoing research and engineering project. It is not an investment advisory service or a source of guaranteed trading signals or returns. Research objectives, architecture concepts, and planned capabilities are not claims of deployment, financial success, production readiness, or authorization to execute live-capital operations.
+MAAI is an ongoing research and engineering project. It is not an investment advisory service or a source of guaranteed trading signals or returns. Research objectives, architecture concepts, and planned capabilities are not claims of deployment, financial success, production readiness, or authorization to execute live-capital operations.
 
 ---
 
-**IMAS in one sentence:** Building an intelligent multi-agent system that turns trustworthy time-series and contextual data into evidence-based decisions, governed automation, authorized execution, and measurable continuous improvement—beginning with a rigorously engineered financial-market application.
+**MAAI in one sentence:** Building an intelligent multi-agent system that turns trustworthy time-series and contextual data into evidence-based decisions, governed automation, authorized execution, and measurable continuous improvement—beginning with a rigorously engineered financial-market application.
