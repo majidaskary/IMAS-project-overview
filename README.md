@@ -1,8 +1,6 @@
 # MAAI Project
 
-## Multi-Agent AI
-
-### for Time-Series Data Analytics, Decision-Making, Automation & Execution
+## Multi-Agent AI<br><small>for Time-Series Data Analytics, Decision-Making, Automation &amp; Execution</small>
 
 **A long-term research and engineering effort to build a governable multi-agent AI system that analyzes time-series and contextual data, makes evidence-backed decisions, automates workflows, executes authorized actions, evaluates outcomes, and improves through controlled learning.**
 
