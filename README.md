@@ -84,11 +84,11 @@ The bars show **milestone status, not percentage completion**: solid blocks mean
 ~~~text
 MAAI — Build Program
 
-Phase 1   — Core Architecture Foundations ......... CLOSED (foundation)    ████████████████████
-Phase 1.5 — Integration & Operationalization ...... ACTIVE TRANSITION      ██████████████▒▒▒▒▒▒
-Phase 2   — Stabilization & Capital Scaling ....... NOT YET ENTERED        ░░░░░░░░░░░░░░░░░░░░
-Phase 3   — Advanced Engines & Adaptation ......... FUTURE ROADMAP         ░░░░░░░░░░░░░░░░░░░░
-Phase 4   — Platformization & Expansion .......... FUTURE ROADMAP          ░░░░░░░░░░░░░░░░░░░░
+Phase 1   — Core Architecture Foundations ......... CLOSED (foundation)  ████████████████████
+Phase 1.5 — Integration & Operationalization ...... ACTIVE TRANSITION    ██████████████▒▒▒▒▒▒
+Phase 2   — Stabilization & Capital Scaling ....... NOT YET ENTERED      ░░░░░░░░░░░░░░░░░░░░
+Phase 3   — Advanced Engines & Adaptation ......... FUTURE ROADMAP       ░░░░░░░░░░░░░░░░░░░░
+Phase 4   — Platformization & Expansion .......... FUTURE ROADMAP        ░░░░░░░░░░░░░░░░░░░░
 ~~~
 
 **Phase 1 engineering foundations (EPICs)**
