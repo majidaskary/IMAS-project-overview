@@ -75,6 +75,43 @@ The five Phase 1 engineering workstreams are:
 
 **These are engineering milestones, not percentages of total project completion.** In particular, they do not establish a fully integrated trading system or permission to operate with live capital.
 
+### Project Progress — Visual Snapshot
+
+The bars show **milestone status, not percentage completion**: solid blocks mean a defined architecture foundation has reached closeout, shaded blocks indicate the active integration transition, and empty blocks represent future phases.
+
+**Program phases**
+
+~~~text
+MAAI — Build Program
+
+Phase 1   — Core Architecture Foundations ......... CLOSED (foundation)    ████████████████████
+Phase 1.5 — Integration & Operationalization ...... ACTIVE TRANSITION      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+Phase 2   — Stabilization & Capital Scaling ....... NOT YET ENTERED        ░░░░░░░░░░░░░░░░░░░░
+Phase 3   — Advanced Engines & Adaptation ......... FUTURE ROADMAP         ░░░░░░░░░░░░░░░░░░░░
+Phase 4   — Platformization & Expansion .......... FUTURE ROADMAP          ░░░░░░░░░░░░░░░░░░░░
+~~~
+
+**Phase 1 engineering foundations (EPICs)**
+
+~~~text
+EPIC 1 — Market Data & Intelligence .............. FOUNDATION CLOSED     ████████████████████
+EPIC 2 — Strategy & Decision Layer ............... FOUNDATION CLOSED     ████████████████████
+EPIC 3 — Execution Layer ......................... FOUNDATION CLOSED     ████████████████████
+EPIC 4 — Risk & Portfolio Layer .................. FOUNDATION CLOSED     ████████████████████
+EPIC 5 — Execution Plane, Evaluation & Live Gate . ARCH. CLOSEOUT 5.24   ████████████████████
+~~~
+
+**MVP and live-operation readiness**
+
+~~~text
+MVP-1 — End-to-End Operational Integration ....... ACCEPTANCE NOT ESTABLISHED
+MVP-2 — Economically Validated Operation ......... ACCEPTANCE NOT ESTABLISHED
+
+Production / Live-Capital Authorization .......... NOT ESTABLISHED
+~~~
+
+These milestones do **not** mean that the entire platform is complete. Operational integration, economic validation, and permission for live-capital execution each require separate evidence and approval.
+
 ## 4. What I'm Working on Now
 
 The immediate priority is **integration before adding more features**:
@@ -91,10 +128,10 @@ Only after integration and operational evidence comes the separate question of w
 
 | Measure | Verified snapshot |
 | --- | ---: |
-| Git-tracked files | **7,726** |
-| Files counted by cloc | **7,573** |
 | Physical lines (including comments and blank lines) | **1,278,820** |
 | cloc-classified code lines | **1,088,258** |
+| Git-tracked files | **7,726** |
+| Files counted by cloc | **7,573** |
 | Scoped PKR tests passing on Python 3.12 and 3.13 | **255 distinct tests** |
 
 **How to read these numbers:** The cloc “code” category includes Python, JSON, Markdown, and other recognized content. It does **not** mean 1.09 million lines of executable software. The 255 tests are the same scoped tests passing in **both** Python environments; this does not establish a full-project test-suite pass or end-to-end operational readiness.
