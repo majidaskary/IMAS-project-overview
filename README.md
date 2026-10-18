@@ -4,48 +4,109 @@
 
 ## Multi-Agent AI<br><small>for Time-Series Data Analytics, Decision-Making, Automation &amp; Execution</small>
 
-**A long-term research and engineering effort to build a governable multi-agent AI system that analyzes time-series and contextual data, makes evidence-backed decisions, automates workflows, executes authorized actions, evaluates outcomes, and improves through controlled learning.**
+**I'm building MAAI: a multi-agent AI system that brings data analysis, decision-making, risk controls, automation, and authorized execution into one measurable workflow.**
 
-> **Public overview.** This repository presents the mission, system vision, engineering philosophy, current foundations, and long-term roadmap of MAAI. The main implementation and detailed engineering artifacts are maintained privately. The architecture and roadmap described here include both existing foundations and future objectives; they should not be read as a claim that every capability is already operational.
+The first application is **financial-market analysis and automated trading research**. The longer-term goal is a reliable system that can make decisions from evidence, act only within defined permissions, measure real outcomes, and improve through controlled testing.
 
----
+**Current status:** The main architecture and engineering foundation tracks have reached their defined closeout milestones. The active work is to connect and validate those foundations as an end-to-end system. **A production-ready autonomous trading platform, proven profitability, and live-capital authorization have not been established.**
 
-## 1. What Is MAAI?
-
-**MAAI (Multi-Agent AI)** is a research and engineering project focused on building an integrated, intelligent multi-agent system. Its central goal is to **build the system itself**, rather than use AI agents merely as accessories to an analytics application.
-
-Its core focus is the complete lifecycle of intelligent, time-sensitive operations:
-
-**Observe and understand data → analyze and reason → decide → apply risk and authority controls → automate and execute → measure outcomes → learn and improve.**
-
-The project's first and most developed application is **a private financial-market engineering implementation**. Its long-term product objective is a dependable, increasingly intelligent automated trading platform that can operate under realistic market constraints, make evidence-backed decisions, execute safely when authorized, and pursue **positive, sustainable, risk-adjusted economic performance**.
-
-That economic performance is an objective to establish through realistic evidence, **not an achieved or guaranteed result**.
-
-Although financial markets are the primary proving ground, the MAAI identity reflects broader research into multi-agent intelligence, time-series data, decision systems, governed automation, and reusable platform architecture. Other applications are possibilities for future investigation, not claims of present implementations or already-approved roadmap commitments.
+This repository explains the project publicly; its implementation is maintained in a private repository.
 
 ---
 
-## Project at a Glance — Verified Engineering Snapshot
+## 1. What the System Is Designed to Do
 
-**Measured 17 October 2026** · Fixed source commit: `efb8723c92ad355f7f288023f1da99214fb29c6d` · **cloc 2.10** · Git-tracked files with documented exclusions.
+MAAI is intended to connect four capabilities that are often developed separately:
 
-| **1,278,820** physical lines | **1,088,258** cloc-classified code lines | **7,573** counted files | **255** verified PKR tests |
-| :---: | :---: | :---: | :---: |
-| Includes code, comments and blanks | Includes Python, JSON, Markdown and configuration | From **7,726** Git-tracked files | Passed on **both Python 3.12 and 3.13** |
+| Capability | What it means in practice |
+| --- | --- |
+| **Analytics** | Turn time-series data and relevant context into usable insights, such as market trends, volatility, patterns, and changing conditions. |
+| **Decision-making** | Compare possible actions, weigh uncertainty, and apply strategy, portfolio, and risk constraints. Choosing **not to act** is also a valid outcome. |
+| **Automation** | Coordinate analysis, experiments, validation, and operational workflows with monitoring and human oversight. |
+| **Execution** | Carry out explicitly permitted actions, track what actually happened, and account for costs, delays, errors, and other real-world constraints. |
 
-> **Reading the numbers correctly:** The 1,088,258 figure is the `cloc code` category **across all recognized file types**, including prose in Markdown and data in JSON. It is **not** 1.09 million lines of executable application code. The 255 tests are the **same scoped `tests/pkr` tests** passing in two Python environments—not 510 distinct tests or evidence of a full-project test-suite pass.
+The intended operating cycle is:
 
-### Language and Content Distribution
+~~~text
+Data and context
+      ↓
+Analysis and possible decisions
+      ↓
+Risk checks and authorization
+      ↓
+Controlled action (when permitted)
+      ↓
+Actual results and evaluation
+      ↓
+Tested improvements → next cycle
+~~~
 
-Share of the **1,088,258 cloc-classified code lines**:
+**Why multi-agent AI?** Over time, specialized AI agents could collaborate on tasks such as data quality, analysis, strategy, risk, execution support, and independent evaluation. This is a **design direction**, not a claim that a complete autonomous team of runtime agents is operating today.
 
-| Language / content | Counted files | cloc code lines |
+## 2. Why Financial Markets First?
+
+Financial markets are the project's first practical testing ground because they combine time-sensitive data, uncertain decisions, financial risk, and measurable outcomes.
+
+The engineering work covers market data, strategies, risk and portfolio logic, execution infrastructure, and evidence-based evaluation. For a trading system to be useful, it must also account for **fees, slippage, liquidity, latency, failures, and market changes**—not just promising backtest results.
+
+The objective is to investigate whether the system can eventually achieve **sustainable, risk-adjusted economic performance**. That outcome is **not yet demonstrated**.
+
+## 3. Where the Project Stands
+
+| Stage | Status | Meaning |
+| --- | --- | --- |
+| **Phase 1 — Engineering foundations** | **Foundation closeout reached** | The five defined architecture and engineering workstreams have completed their respective foundation milestones; this is not a finished product. |
+| **Phase 1.5 — Integration and validation** | **Active** | Connect the components, exercise realistic workflows, and verify end-to-end behavior. |
+| **MVP-1 — Operational integration** | **Not yet accepted** | Demonstrate one measured end-to-end flow, including authorized non-production execution and evaluation. |
+| **MVP-2 — Economic validation** | **Not yet accepted** | Establish economic results using realistic assumptions and robust evidence, after operational integration. |
+| **Phase 2 — Robustness and scaling** | **Not entered** | Future work on resilience, monitoring, and controlled scaling. |
+| **Phase 3 — Advanced and adaptive systems** | **Future roadmap** | Further intelligent analysis, research, and controlled adaptation. |
+| **Phase 4 — Platform expansion** | **Future roadmap** | Broader platform capabilities and more advanced multi-agent operation. |
+
+The five Phase 1 engineering workstreams are:
+
+| Workstream | Foundation focus |
+| --- | --- |
+| **EPIC 1** | Market data and intelligence |
+| **EPIC 2** | Strategies and decision systems |
+| **EPIC 3** | Execution infrastructure |
+| **EPIC 4** | Portfolio and risk management |
+| **EPIC 5** | Execution orchestration, factual state, evaluation, safety, and permission controls (architecture closeout through 5.24) |
+
+**These are engineering milestones, not percentages of total project completion.** In particular, they do not establish a fully integrated trading system or permission to operate with live capital.
+
+## 4. What I'm Working on Now
+
+The immediate priority is **integration before adding more features**:
+
+1. **Connect** market inputs, analytics, decisions, risk and permission checks, execution planning, and evaluation into a coherent workflow.
+2. **Exercise and measure** that workflow in authorized, non-production conditions, including realistic failures and trading costs.
+3. **Verify the results** against factual records and explicit acceptance criteria before claiming MVP-1 completion.
+
+Only after integration and operational evidence comes the separate question of whether the system has a credible economic advantage (MVP-2). Later phases depend on their own validation and authorization.
+
+## 5. Engineering Snapshot
+
+<small>Measured **17 October 2026** from a fixed internal source snapshot, using **cloc 2.10** on Git-tracked files with documented exclusions. These are historical measurements, not a live repository counter.</small>
+
+| Measure | Verified snapshot |
+| --- | ---: |
+| Git-tracked files | **7,726** |
+| Files counted by cloc | **7,573** |
+| Physical lines (including comments and blank lines) | **1,278,820** |
+| cloc-classified code lines | **1,088,258** |
+| Scoped PKR tests passing on Python 3.12 and 3.13 | **255 distinct tests** |
+
+**How to read these numbers:** The cloc “code” category includes Python, JSON, Markdown, and other recognized content. It does **not** mean 1.09 million lines of executable software. The 255 tests are the same scoped tests passing in **both** Python environments; this does not establish a full-project test-suite pass or end-to-end operational readiness.
+
+### Repository Content Mix
+
+| Content type | Counted files | cloc code lines |
 | --- | ---: | ---: |
-| **Python** | 2,599 | **784,669** |
-| **JSON** | 4,285 | **209,161** |
-| **Markdown** | 681 | **93,718** |
-| Other (YAML, PowerShell, TOML, Text) | 8 | 710 |
+| Python | 2,599 | 784,669 |
+| JSON | 4,285 | 209,161 |
+| Markdown | 681 | 93,718 |
+| Other | 8 | 710 |
 | **Total** | **7,573** | **1,088,258** |
 
 ~~~text
@@ -55,338 +116,29 @@ Markdown   8.61%  ██░░░░░░░░░░░░░░░░░░�
 Other      0.07%  ▏
 ~~~
 
-### Program Build Snapshot
+The full engineering records, measurement provenance, and detailed implementation remain private. The numbers describe the **scale of the engineering work**, not product maturity, test coverage, or financial performance.
 
-A phase-level view of the **documented engineering program**. Solid blocks mark a closed **architecture foundation**; shaded blocks indicate an **active transition**; empty blocks indicate **future phases**. Bars are **status markers, not completion percentages**.
+## 6. How I Approach the Engineering
 
-~~~text
-MAAI — Build Program
+- **Evidence before claims:** A design, implementation, successful test, integrated workflow, and proven operational result are different milestones.
+- **Safety and permissions:** AI-generated suggestions do not automatically authorize execution. Risk checks, approvals, and the ability to stop operations are essential.
+- **Realistic evaluation:** Decisions must be assessed under costs, uncertainty, market constraints, and failure conditions.
+- **Traceability and controlled improvement:** Results should be explainable and reproducible; changes must be tested before they are adopted.
 
-Phase 1   — Core Architecture Foundations ......... CLOSED (foundation)    ████████████████████
-Phase 1.5 — Integration & Operationalization ...... ACTIVE TRANSITION      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-Phase 2   — Stabilization & Capital Scaling ....... NOT YET ENTERED        ░░░░░░░░░░░░░░░░░░░░
-Phase 3   — Advanced Engines & Adaptation ......... FUTURE ROADMAP         ░░░░░░░░░░░░░░░░░░░░
-Phase 4   — Platformization & Expansion .......... FUTURE ROADMAP          ░░░░░░░░░░░░░░░░░░░░
-~~~
+## 7. Scope and Future Direction
 
-**Phase 1 architecture/foundation closeout is not product completion.** Phase 1.5 is the current operational integration and validation transition; entry into subsequent phases requires separate criteria and authorization.
+Financial markets are the primary implementation and validation domain. The underlying ideas—time-series analysis, cooperating specialist agents, decision-making, and governed automation—may eventually be useful in other settings. **No other domain-specific product is claimed to exist today.**
 
-### Phase 1 — EPIC-by-EPIC Foundation Snapshot
+The roadmap is deliberately staged: operational integration first, realistic economic evaluation next, and more advanced intelligence or platform capabilities only when the evidence and conditions justify them.
 
-~~~text
-EPIC 1 — Market Data & Intelligence .............. FOUNDATION CLOSED     ████████████████████
-EPIC 2 — Strategy & Decision Layer ............... FOUNDATION CLOSED     ████████████████████
-EPIC 3 — Execution Layer ......................... FOUNDATION CLOSED     ████████████████████
-EPIC 4 — Risk & Portfolio Layer .................. FOUNDATION CLOSED     ████████████████████
-EPIC 5 — Execution Plane, Evaluation & Live Gate . ARCH. CLOSEOUT 5.24   ████████████████████
-~~~
+## 8. About This Repository and the Author
 
-All **five Phase 1 engineering/architecture foundation tracks** have documented closeout or implementation through their defined closeout boundary. This says nothing about the percentage completion of the **entire** MAAI vision.
+This is the **public overview of MAAI Project (Multi-Agent AI)**. It shares the purpose, progress, and direction of the work, not the private core source code or operational infrastructure.
 
-### MVP Acceptance and Operational Readiness
+**Majid Askary** — software engineering, systems architecture, applied AI research, and data-driven automation.
 
-~~~text
-MVP-1 — End-to-End Operational Integration ....... ACCEPTANCE NOT ESTABLISHED
-MVP-2 — Economically Validated Operation ......... ACCEPTANCE NOT ESTABLISHED
-
-Production / Live-Capital Authorization .......... NOT ESTABLISHED
-~~~
-
-- **MVP-1** requires a connected and measured end-to-end operational flow, including authorized non-production execution, factual results and evaluation.
-- **MVP-2** requires separate, realistic economic evidence after operational integration; profitable or sustainable performance must not be presumed.
-- **Controlled-live / production permissions** require explicit scoped authorization and cannot be inferred from EPIC closeout, CI success or an architecture diagram.
-
-**Status basis:** canonical project-state and Phase 1 → Phase 2 transition planning at the same fixed-commit snapshot used for the engineering measurements above. These indicators are **qualitative milestone states**, not newly calculated progress percentages.
-
-### Quality Evidence and Measurement Scope
-
-The fixed-commit CI record confirms **255 PKR tests passed** on **Python 3.12** and **Python 3.13**, separately. No complete test-suite PASS, all-system integration acceptance, economic edge, production readiness, or live-capital authorization is established by this snapshot.
-
-<details>
-<summary>Detailed line counts, historical size reference, and reproducibility method</summary>
-
-**Line categories (cloc 2.10):**
-
-| Category | Lines |
-| --- | ---: |
-| Nonblank, noncomment (`code`) | 1,088,258 |
-| Comments | 17,485 |
-| Blank | 173,077 |
-| **Total physical lines** | **1,278,820** |
-
-**Major tracked path groups** (the groups below are not exhaustive):
-
-| File area | Counted files | cloc code lines |
-| --- | ---: | ---: |
-| Application source (`src/**`) | 1,021 | 477,003 |
-| Test assets (`tests/**`) | 1,591 | 307,124 |
-| Engineering documentation (`docs/**`) | 242 | 63,962 |
-
-Of the source path's classified content, Python represents **476,910** code lines in **1,015** files. Of the test path's classified content, Python represents **304,638** code lines in **1,569** files. These counts are not coverage or numbers of passed tests.
-
-**Historical reference:** An earlier overview reported **968 counted files** and **178,690 cloc code lines**. The fixed snapshot reports **7,573** and **1,088,258** respectively—an arithmetic ratio of **7.82×** files and **6.09×** cloc code lines. The historical snapshot's exact commit, raw cloc report, and tool version were not independently reconstructed, so these are **descriptive size comparisons**, not a controlled growth metric or a measure of maturity.
-
-**Reproducibility:** Measured on Git-tracked files at commit `efb8723c92ad355f7f288023f1da99214fb29c6d` with:
-
-~~~bash
-cloc . --vcs=git --exclude-dir=.git,.venv,venv,dist,build,tmp,obsidian,node_modules,.pytest_cache,__pycache__,htmlcov,.mypy_cache --json --out=cloc_tracked.json
-~~~
-
-The matching non-VCS `cloc .` run gave identical per-language counts at the same clean checkout. **153 tracked files** were not counted, including the explicitly excluded knowledge-vault directory, zero-byte files, unrecognized/non-code files, and a binary fixture. Counts are a **fixed historical measurement** and should be remeasured on any newer baseline before being described as current.
-
-</details>
-
----
-
-## 2. Mission and North Star
-
-MAAI aims to bring together capabilities often developed in isolation and make them work as **one coherent, measurable, accountable operational system**.
-
-The intended outcome is a system that can:
-
-1. **Observe:** ingest reliable time-indexed and contextual information, preserving data integrity, timing, identity, and provenance.
-2. **Understand:** interpret patterns, trends, anomalies, regimes, uncertainty, and interactions across data sources.
-3. **Reason:** combine analytical methods, structured logic, research evidence, and eventually specialized intelligent agents.
-4. **Decide:** select or reject strategies and actions with explicit confidence, constraints, and portfolio-level context.
-5. **Protect:** evaluate risk, enforce safety boundaries, and distinguish recommendations from actual authorization.
-6. **Act:** coordinate workflows and perform approved operations through controlled execution mechanisms.
-7. **Evaluate:** determine what actually happened, why it happened, and how credible the result is.
-8. **Improve:** diagnose weaknesses, test alternatives, and adapt only through traceable, reproducible, reviewable processes.
-
-The north star is **real operational competence supported by evidence**, rather than the number of models, agents, indicators, or features in the repository.
-
-## 3. The Four Functional Pillars
-
-The subtitle of MAAI describes four connected capabilities. They are not four independent products.
-
-### Analytics — Time-Series Data and Contextual Intelligence
-
-Transform raw observations into trustworthy analytical context. The research direction includes:
-
-- historical and live or representative data ingestion, validation, normalization, and provenance;
-- chart and price-action analysis, trends, momentum, volatility, volume, patterns, and market structure;
-- multi-timeframe, cross-asset, statistical, quantitative, and regime-aware techniques;
-- anomaly detection, feature engineering, and model/indicator comparison;
-- the future integration of fundamental, macroeconomic, news, and other contextual information where evidence and data availability justify it.
-
-The objective is not merely to add more indicators, but to understand **when a method is useful, when it fails, and what evidence supports its use**.
-
-### Decision-Making — Evidence, Strategy, and Judgment
-
-Turn analysis into decisions that can be inspected and evaluated:
-
-- strategy generation, selection, combination, and meta-strategy research;
-- market-regime-aware reasoning and context-dependent decisions;
-- uncertainty and confidence assessment, conflicting-evidence handling, and **no-action / no-trade** outcomes;
-- portfolio construction, capital allocation, exposure, concentration, and correlation awareness;
-- explicit separation of analytical recommendations, risk decisions, and authorization.
-
-A decision is not correct merely because an agent produced it; its assumptions, constraints, and results must be testable.
-
-### Automation — Coordination and Controlled Workflows
-
-Develop an architecture in which specialized components and, over time, intelligent agents can cooperate without losing accountability:
-
-- orchestrated data, research, analysis, experimentation, and evaluation workflows;
-- bounded agent roles with explicit interfaces and ownership;
-- reproducible scenario, batch, backtest, replay, and simulation processes;
-- automation that is observable, cancellable, recoverable, and subject to governance;
-- operator interfaces and human oversight for consequential processes.
-
-**Automation does not imply unlimited autonomy.** Agents and workflows must not silently acquire execution or approval authority.
-
-### Execution — Authorized Real-World Action
-
-Connect decisions to operational outcomes through a controlled execution plane:
-
-- execution requests, planning, context resolution, orchestration, and runtime engines;
-- execution intent, orders, fill and state semantics, reconciliation, and failure handling;
-- fees, spreads, liquidity, slippage, timing, latency, and partial-fill realities;
-- risk, permission, safety, approval, audit, and revocation boundaries;
-- factual state, event records, traceability, and independent outcome evaluation.
-
-The objective is to execute **correctly and safely in an explicitly permitted environment**, not to infer live-market permission from the presence of execution code.
-
-## 4. Cross-Cutting Intelligence and Engineering Capabilities
-
-The four pillars describe what the system does. The following capabilities determine **whether its behavior is trustworthy, useful, and sustainable**.
-
-| Capability domain | Long-term objective |
-| --- | --- |
-| **Technical and quantitative intelligence** | Broader pattern research, market structure, statistical methods, ensembles, and condition-aware analysis |
-| **Fundamental and contextual intelligence** | Integrate economic, financial, textual, and relevant external evidence with market observations |
-| **Multi-agent reasoning** | Cooperating specialist agents for analysis, research, critique, risk, portfolio, and execution support |
-| **Strategy and portfolio intelligence** | Multi-strategy selection, diversification, capital allocation, and risk-adjusted optimization |
-| **Risk and safety intelligence** | Pre-action risk, drawdown, liquidity, model and operational risks, emergency controls, and bounded authority |
-| **Execution intelligence** | Understand and improve fill quality, timing, costs, market constraints, and operational resilience |
-| **Evaluation science** | Realistic backtests, replay, paper and live-shadow evidence, reproducibility, baselines, and out-of-sample testing |
-| **Measurement and attribution** | Explain contributions of signals, strategy choices, sizing, risk controls, and execution to actual outcomes |
-| **Self-diagnosis and controlled learning** | Detect drift and degradation; propose and validate changes without uncontrolled self-modification |
-| **Data, knowledge, and memory** | Provenance, canonical records, experiment/decision history, and durable structured project knowledge |
-| **Reliability, explainability, and security** | Recovery, idempotency, observability, evidence-backed explanations, least privilege, and auditability |
-| **Platform and product evolution** | Operator dashboards, APIs, extensible services, scalability, and potentially multi-user / multi-account deployment |
-
-These are **long-term capability objectives with varying maturity**, not a checklist of deployed features.
-
-## 5. Multi-Agent System Vision
-
-Multi-agent intelligence is intended to be part of the **system architecture**, not merely a label for the user interface or a collection of chat prompts.
-
-Future specialist roles may include:
-
-| Specialist role | Intended responsibility |
-| --- | --- |
-| Data and quality analyst | Data integrity, timing, completeness, and provenance |
-| Technical analyst | Chart structures, indicators, patterns, and cross-timeframe signals |
-| Fundamental and macro analyst | Financial context, events, external information, and macro conditions |
-| Market-regime analyst | Regime identification, uncertainty, and changing market conditions |
-| Strategy and decision agent | Candidate actions, strategy comparison, and decision rationale |
-| Portfolio and risk agents | Allocation, exposure, constraints, and risk assessment |
-| Execution specialist | Execution proposals, cost/quality analysis, and operational feedback |
-| Critic and evaluator | Challenge assumptions, compare evidence, investigate failures |
-| Research and knowledge specialist | Experiments, retrieval of prior findings, and controlled improvement proposals |
-
-**Architecture direction is not a deployment claim.** The current project also uses a structured, role-separated human–AI engineering collaboration model. That development workflow is distinct from a fully integrated, autonomously cooperating **runtime** team of specialist agents, which remains a longer-term architecture objective.
-
-Regardless of agent capabilities, the system must retain explicit ownership of factual state, risk assessment, permissions, and execution authority.
-
-## 6. Target End-to-End Operating Loop
-
-The intended operating model is a closed loop of observation, decision, action, and learning:
-
-~~~text
-Real / Representative Data + Contextual Inputs
-                      |
-                      v
-        Data Integrity, Timing & Provenance
-                      |
-                      v
-        Features, Patterns & Market Context
-                      |
-                      v
-       Analytics + Specialist Intelligence
-                      |
-                      v
-       Strategy / Decision + Uncertainty
-                      |
-                      v
-             Portfolio & Risk
-                      |
-                      v
-      Policy, Permission & Safety Gates
-                      |
-                      v
-       Execution Planning & Orchestration
-                      |
-                      v
-        Authorized Operational Action
-                      |
-                      v
-         Actual Outcomes & State Truth
-                      |
-                      v
-      Evidence, Evaluation & Attribution
-                      |
-                      v
-    Research, Diagnosis & Controlled Change
-                      |
-                      +------> Revalidation / Next Cycle
-~~~
-
-This is a **target product workflow**, not a claim that an end-to-end production-live autonomous system has been demonstrated. Real implementation and authorization remain subject to canonical contracts, tests, evidence, and project governance.
-
-## 7. First Concrete Application: Financial-Market Engineering Core
-
-The private **financial-market engineering core** is the primary implementation and validation domain for MAAI. Financial markets provide a demanding environment in which analytical quality, execution behavior, safety, timing, evidence, and economic outcomes can be assessed together.
-
-The documented engineering foundation includes:
-
-- **EPIC 1:** market data and market-intelligence foundations;
-- **EPIC 2:** strategy and decision-layer foundations;
-- **EPIC 3:** execution-layer foundations;
-- **EPIC 4:** risk and portfolio foundations;
-- **EPIC 5:** an execution plane with planning, orchestration, canonical state/evidence, evaluation, observability, safety, authority, approval, and controlled-live gate models.
-
-According to the canonical project-state and roadmap records, EPICs 1–4 have completed their foundation tracks and EPIC 5 has progressed through Sub-Epic 5.24. These are **engineering and program milestones**, not proof of a fully integrated operational trading MVP, sustainable profitability, or live-capital authorization.
-
-The immediate engineering priority is therefore **integration before expansion**: connect and validate existing foundations as one observable, reproducible, end-to-end system.
-
-## 8. Delivery and Research Roadmap
-
-The program is intentionally staged. Later capabilities must not be confused with current readiness or introduced at the expense of the working core.
-
-| Stage | Intended result | Status interpretation |
-| --- | --- | --- |
-| **Foundation and execution-plane engineering** | Canonical data, strategies, execution, risk, evidence, governance, and control contracts | Significant documented and implemented foundations; does not prove live operation |
-| **MVP-1 — Operational integration** | One end-to-end flow from market input to decision, authorized non-production execution, factual results, and evaluation | Core product-level integration objective requiring evidence |
-| **MVP-2 — Economic validation** | Test whether a realistic, sufficiently robust, positive risk-adjusted edge actually exists | Research and validation objective; not an established performance claim |
-| **Phase 2 — Robustness and capital scaling** | Stress resilience, recovery, monitoring, risk validation, and controlled allocation/portfolio optimization | Conditional future phase |
-| **Phase 3 — Advanced engines and adaptive optimization** | Cross-venue research, machine learning, regime-aware optimization, and controlled adaptation | Conditional future phase |
-| **Phase 4 — Platform and advanced agent intelligence** | Multi-user / multi-account platform capabilities, richer reasoning, agentic intelligence, and operator-facing tooling | Conditional future phase |
-
-Across these stages, the research program also develops technical and fundamental intelligence, knowledge preservation, adversarial evaluation, benchmarking, explainability, and trustworthy automation.
-
-**Future phases have activation conditions.** A roadmap entry is not evidence that a capability is operational or that work on it has been authorized.
-
-## 9. Evidence, Safety, and Operational Truth
-
-MAAI follows a strict engineering distinction:
-
-~~~text
-Designed != Implemented
-Implemented != Integrated
-Integrated != Exercised
-Exercised != Realistic
-Realistic != Measured
-Measured != Economically Validated
-Profitable != Safe
-Safe != Authorized
-~~~
-
-In practice:
-
-- **Evidence over assertions.** Tests, measured behavior, reproducible artifacts, and realistic assumptions matter more than completion percentages.
-- **Reality-first evaluation.** Fees, latency, slippage, liquidity, market regimes, failures, and uncertainty must be represented before interpreting financial results.
-- **Explicit authority.** Analysis, recommendation, permission, risk clearance, approval, and live authorization are different responsibilities.
-- **No mandatory action.** When evidence is inadequate, declining to act may be the correct outcome.
-- **Controlled adaptation.** Any learning-driven change must be observable, versioned, testable, reviewable, and reversible.
-- **Traceable decisions.** Meaningful outcomes should be attributable to data, code, configuration, strategy/model version, relevant constraints, and execution evidence.
-- **Reliability as correctness.** Recovery, reconciliation, failure semantics, security, and operator control are part of the system—not optional finishing work.
-
-**No live-capital or unrestricted autonomous trading authorization is implied by this public overview.**
-
-## 10. Beyond the First Application
-
-MAAI's public description emphasizes **time-series data and a multi-agent operating model**, not one exchange, trading strategy, or product interface.
-
-The currently defined primary product remains the financial-market implementation. In the longer term, parts of the architecture might also inform other time-dependent decision environments—for example, operational monitoring or business/industrial analytics—**if separately researched, justified, governed, and added to an approved roadmap**.
-
-This is a possible expansion direction, not an assertion that those domain-specific products exist today.
-
-## 11. Public Overview, Implementation, and Metrics
-
-This repository is the **public-facing description of MAAI**. It does not contain the private core implementation, confidential engineering artifacts, credentials, or operational infrastructure.
-
-- **MAAI** stands for **Multi-Agent AI** and is the project's short name.
-- **MAAI Project** is the public-facing project title, covering the research and engineering effort and its potential future applications.
-- **The existing private financial-market core** remains the first concrete implementation. Its internal repository identity and naming may evolve independently of this public overview.
-- Current work, tests, architecture, and maturity are governed by the private repository's canonical sources and evidence, not by public marketing claims.
-
-### Metrics and progress reporting
-
-The **Project at a Glance** section after the introductory **What Is MAAI?** section contains a reproducible, fixed-commit engineering scale measurement (17 October 2026, cloc 2.10), plus scoped CI evidence and documented milestone statuses. Its counts are **not** software maturity, test coverage, project completion percentages, economic validation, or operational/live readiness. The old overview's line counts and progress percentages are retained in Git history as historical reference only. Future updates must explicitly name the source commit and evidence scope.
-
-## 12. About the Author
-
-**Majid Askary** — systems architecture, software engineering, data-driven systems, governed automation, and applied multi-agent research.
-
-- [LinkedIn](https://www.linkedin.com/in/majidaskary)
-- [Contact](mailto:m.askary84@yahoo.com)
+[LinkedIn](https://www.linkedin.com/in/majidaskary) · [Contact](mailto:m.askary84@yahoo.com)
 
 ## Disclaimer
 
-MAAI is an ongoing research and engineering project. It is not an investment advisory service or a source of guaranteed trading signals or returns. Research objectives, architecture concepts, and planned capabilities are not claims of deployment, financial success, production readiness, or authorization to execute live-capital operations.
-
----
-
-**MAAI in one sentence:** Building an intelligent multi-agent system that turns trustworthy time-series and contextual data into evidence-based decisions, governed automation, authorized execution, and measurable continuous improvement—beginning with a rigorously engineered financial-market application.
+MAAI is an ongoing research and engineering project, **not** an investment advisory service. Its goals and architectural plans are not claims of guaranteed returns, production deployment, autonomous trading readiness, or authorization for live-capital execution.
